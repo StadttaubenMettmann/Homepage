@@ -127,6 +127,47 @@ nav a.active::after {
   background-color: white;
 }
 
+/* Mobile Menü Styles */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+  z-index: 101;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #2c3e50;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animiertes Hamburger-Icon */
+.mobile-menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
 /* ==========================================================================
    Komponenten: Seiten-spezifische Sektionen
    ========================================================================== */
@@ -1413,23 +1454,92 @@ body.modal-open {
    ========================================================================== */
 @media (max-width: 768px) {
   .logo-container {
-    flex-direction: column;
-    text-align: center;
     padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
   }
   
   .logo-image {
-    margin-right: 0;
-    margin-bottom: 10px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 0;
   }
   
-  nav ul {
+  .logo-text {
+    flex: 1;
+  }
+  
+  .site-title {
+    font-size: 1.5em;
+  }
+  
+  .tagline {
+    font-size: 0.8em;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #3498db;
+    z-index: 100;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding-top: 70px;
+    overflow-y: auto;
+  }
+  
+  .main-nav.active {
+    right: 0;
+  }
+  
+  .main-nav ul {
     flex-direction: column;
+    padding: 0;
   }
   
-  nav a {
-    padding: 0.8em;
+  .main-nav li {
+    width: 100%;
+  }
+  
+  .main-nav a {
+    padding: 15px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    display: block;
+  }
+  
+  /* Overlay für den Hintergrund, wenn das Menü geöffnet ist */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+  
+  .menu-overlay.active {
+    display: block;
+  }
+  
+  /* Anpassung der aktiven Navigation für mobile Geräte */
+  .main-nav a.active::after {
+    width: 4px;
+    height: 70%;
+    left: 0;
+    top: 15%;
+    bottom: auto;
   }
   
   .hero-section {
@@ -1536,6 +1646,94 @@ body.modal-open {
     border-radius: 50%;
     z-index: 1002;
   }
+  
+  /* Größere Touch-Ziele für mobile Geräte */
+  .cta-button, 
+  .submit-button, 
+  .read-more,
+  .event-link {
+    padding: 12px 20px;
+    min-height: 44px; /* Apple empfiehlt mindestens 44px für Touch-Ziele */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .faq-question {
+    padding: 15px;
+    min-height: 44px;
+  }
+  
+  .faq-toggle {
+    padding: 10px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Verbesserte Abstände zwischen Elementen */
+  .highlight-card {
+    margin-bottom: 20px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  /* Verbesserte Lesbarkeit */
+  body {
+    font-size: 16px; /* Mindestens 16px für mobile Geräte */
+  }
+  
+  p, li {
+    line-height: 1.6;
+  }
+  
+  /* Verbesserte Formulare für mobile Geräte */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    padding: 12px;
+    font-size: 16px; /* Verhindert Zoom auf iOS */
+  }
+  
+  .checkbox-group {
+    margin: 20px 0;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+  }
+  
+  /* Bessere Darstellung der Formularfelder */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Optimierte Bilder für mobile Geräte */
+  .card-image {
+    height: 200px; /* Etwas größer für bessere Sichtbarkeit */
+  }
+  
+  .news-image img,
+  .event-image img,
+  .about-image img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  /* Verbesserte Darstellung von Bildern im Modal */
+  .modal-body img {
+    margin: 10px auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1636,21 +1834,6 @@ body.modal-open {
   
   #aufklaerung-modal li {
     margin-bottom: 0.7em;
-  }
-  
-  /* Verbesserte Schließen-Schaltfläche */
-  .modal-close {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 50%;
-    z-index: 1002;
   }
 }
 
