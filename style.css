@@ -1477,6 +1477,8 @@ body.modal-open {
   .modal-container {
     margin: 10px auto;
     max-height: 95vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Für besseres Scrolling auf iOS */
   }
   
   #modal-overlay .modal-content h2, 
@@ -1519,6 +1521,21 @@ body.modal-open {
     width: 100%;
     justify-content: center;
   }
+  
+  /* Verbesserte Schließen-Schaltfläche */
+  .modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 1002;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1544,6 +1561,7 @@ body.modal-open {
   .modal-container {
     margin: 5px;
     max-width: calc(100% - 10px);
+    max-height: 88vh;
   }
   
   #modal-overlay .modal-content h2 {
@@ -1572,4 +1590,196 @@ body.modal-open {
   #aufklaerung-modal li {
     margin-bottom: 0.8em;
   }
+  
+  /* Verbesserte Lesbarkeit für kleine Bildschirme */
+  #aufklaerung-modal p,
+  #aufklaerung-modal li {
+    margin-bottom: 0.6em;
+    line-height: 1.4;
+  }
+}
+
+/* Verbesserte Modal-Darstellung für mobile Geräte */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 95%;
+    max-height: 85vh;
+    margin: 10px auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Für besseres Scrolling auf iOS */
+  }
+  
+  #modal-overlay .modal-content h2,
+  .event-modal-header h2 {
+    font-size: 1.3em;
+    padding: 12px 15px;
+    line-height: 1.3;
+  }
+  
+  #modal-overlay .modal-body,
+  .event-modal-body {
+    padding: 12px 15px;
+    font-size: 0.95em;
+  }
+  
+  /* Spezifisch für das Aufklärungs-Modal */
+  #aufklaerung-modal .modal-body {
+    padding: 12px 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  
+  #aufklaerung-modal ul {
+    padding-left: 15px;
+    margin-bottom: 1em;
+  }
+  
+  #aufklaerung-modal li {
+    margin-bottom: 0.7em;
+  }
+  
+  /* Verbesserte Schließen-Schaltfläche */
+  .modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 1002;
+  }
+}
+
+/* Noch kleinere Bildschirme (Smartphones) */
+@media (max-width: 480px) {
+  .modal-container {
+    width: 98%;
+    margin: 5px auto;
+    max-height: 88vh;
+  }
+  
+  #modal-overlay .modal-content h2,
+  .event-modal-header h2 {
+    font-size: 1.2em;
+    padding: 10px 12px;
+  }
+  
+  #aufklaerung-modal .modal-body {
+    font-size: 0.85em;
+    padding: 10px 12px;
+  }
+  
+  /* Verbesserte Lesbarkeit für kleine Bildschirme */
+  #aufklaerung-modal p,
+  #aufklaerung-modal li {
+    margin-bottom: 0.6em;
+    line-height: 1.4;
+  }
+}
+
+/* Styling für optimierte mobile Modals */
+.toggle-content-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  color: #3498db;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.toggle-content-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.image-preview {
+  text-align: center;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.expand-image-text {
+  display: block;
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 5px;
+}
+
+.fullscreen-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-image-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.fullscreen-image img {
+  max-width: 100%;
+  max-height: 90vh;
+  display: block;
+}
+
+.close-fullscreen {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Verbesserte Lesbarkeit im Modal */
+.info-box {
+  background-color: #e8f4f8;
+  border-left: 4px solid #3498db;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+.info-box h4 {
+  margin-top: 0;
+  color: #2980b9;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+/* Responsive Anpassungen für die Info-Box */
+@media (max-width: 480px) {
+  .info-box {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .info-box h4 {
+    font-size: 1em;
+  }
+}
+
+/* Verbesserte Darstellung von Bildern im Modal */
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 4px;
 }
