@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns - Taubenhilfe Mettmann</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <script src="header-content.js"></script>
+  </header>
+  
+  <div class="page-header">
+    <div class="page-header-content">
+      <h2>Über uns</h2>
+      <p>Erfahren Sie mehr über unsere Arbeit und unser Team</p>
+    </div>
+  </div>
+  
+  <main>
+    <section class="about-intro">
+      <div class="about-content">
+        <h2 class="section-title">Unsere Geschichte</h2>
+        <p>Die Taubenhilfe Mettmann wurde im Jahr 2024 von einer Gruppe engagierter Tierschützer gegründet, die sich für das Wohlergehen der Stadttauben in Mettmann und Umgebung einsetzen wollten. Was als kleine Initiative begann, hat sich mittlerweile zu einem etablierten Verein entwickelt, der eng mit der Stadt, Tierärzten und anderen Tierschutzorganisationen zusammenarbeitet.</p>
+        
+        <p>Unser Ziel war es von Anfang an, ein tierschutzgerechtes Management der Taubenpopulation zu etablieren und gleichzeitig Aufklärungsarbeit zu leisten, um das oft negative Image der Stadttauben zu verbessern.</p>
+      </div>
+      <div class="about-image">
+        <img src="images/team-group.jpg" alt="Das Team der Taubenhilfe Mettmann">
+      </div>
+    </section>
+    
+    <section class="mission-section">
+      <h2 class="section-title">Unsere Mission</h2>
+      <div class="mission-container">
+        <div class="mission-item">
+          <div class="mission-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Tierschutz</h3>
+          <p>Wir setzen uns für eine artgerechte und tierschutzgerechte Behandlung von Stadttauben ein. Dazu gehört die Versorgung verletzter und kranker Tiere sowie die Schaffung geeigneter Lebensräume.</p>
+        </div>
+        
+        <div class="mission-item">
+          <div class="mission-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Aufklärung</h3>
+          <p>Durch Bildungs- und Öffentlichkeitsarbeit informieren wir über das Leben der Stadttauben und räumen mit Vorurteilen auf. Wir bieten Vorträge, Infomaterial und Beratung an.</p>
+        </div>
+        
+        <div class="mission-item">
+          <div class="mission-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3>Bestandsregulierung</h3>
+          <p>Wir fördern tierschutzgerechte Methoden zur Bestandsregulierung, wie betreute Taubenschläge mit Ei-Austausch, als Alternative zu grausamen Vergrämungsmaßnahmen.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <script src="footer-content.js"></script>
+  </footer>
+
+<!-- Event Modal (leer, wird von app.js gesteuert) -->
+  <div id="event-modal-overlay" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-close">×</div>
+      <div id="event-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Skripte laden -->
+  <script src="news-data.js"></script>
+  <script src="events-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

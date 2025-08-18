@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Taubenhilfe Mettmann</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <script src="header-content.js"></script>
+  </header>
+  
+  <div class="page-header">
+    <div class="page-header-content">
+      <h2>Kontakt</h2>
+      <p>Nehmt Kontakt mit uns auf</p>
+    </div>
+  </div>
+  
+  <main>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info-box">
+          <h2 class="section-title">So erreicht Ihr uns</h2>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Adresse</h3>
+              <p>Stadttauben Mettmann e.V.</p>
+              <p>40822 Mettmann</p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Telefon</h3>
+              <p>Mobil: 01525 9823580</p> 
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>E-Mail</h3>
+              <p>stadttauben_mettmann@gmx.de</p>
+            </div>
+          </div>
+          
+          <div class="social-contact">
+            <h3>Folgen Sie uns</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/groups/400468505791432/" target="_blank" rel="noopener noreferrer" aria-label="Besuchen Sie uns auf Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Neue Bankdaten-Sektion -->
+        <div class="contact-info-box" id="bankdaten">
+          <h2 class="section-title">Bankverbindung</h2>
+          
+          <div class="bank-info">
+            <div class="bank-details">
+              <p><strong>Kontoinhaber:</strong> <span id="account-holder">Stadttauben Mettmann e.V.</span></p>
+              <p><strong>IBAN:</strong> <span id="iban">DE64 3015 0200 0002 1884 56</span></p>
+              <p><strong>BIC:</strong> <span id="bic">WELADED1KSD</span></p>
+              <p><strong>Bank:</strong> <span id="bank-name">Kreissparkasse Düsseldorf</span></p>
+              <p><strong>Verwendungszweck:</strong> <span id="purpose">Spende Stadttauben Mettmann</span></p>
+            </div>
+            <div class="copy-buttons">
+              <button class="copy-button" data-copy="account-holder">
+                <i class="fas fa-copy"></i> Kontoinhaber kopieren
+              </button>
+              <button class="copy-button" data-copy="iban">
+                <i class="fas fa-copy"></i> IBAN kopieren
+              </button>
+              <button class="copy-button" data-copy="bic">
+                <i class="fas fa-copy"></i> BIC kopieren
+              </button>
+              <button class="copy-button" data-copy="purpose">
+                <i class="fas fa-copy"></i> Verwendungszweck kopieren
+              </button>
+              <button class="copy-button copy-all">
+                <i class="fas fa-copy"></i> Alle Daten kopieren
+              </button>
+            </div>
+            <div class="copy-notification" id="copy-notification">
+              <i class="fas fa-check-circle"></i> In die Zwischenablage kopiert!
+            </div>
+          </div>
+          
+          <div class="donation-info">
+            <h3>Hinweis zur Spendenquittung</h3>
+            <p>Für Spenden bis 300 Euro reicht dem Finanzamt der Kontoauszug als Nachweis. Für höhere Beträge stellen wir gerne eine Spendenquittung aus. Bitte kontaktiert uns dafür unter Angabe eurer vollständigen Adresse.</p>
+          </div>
+        </div>
+        
+        <div class="contact-form-box">
+          <h2 class="section-title">Kontaktformular</h2>
+          
+          <form class="contact-form" action="https://formspree.io/f/IHRE_FORMSPREE_ID" method="POST" id="contact-form">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Betreff *</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Nachricht *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *</label>
+            </div>
+            
+            <!-- Honeypot-Feld gegen Spam -->
+            <div class="form-group" style="display:none;">
+              <label for="website">Website (Bitte nicht ausfüllen)</label>
+              <input type="text" id="website" name="_gotcha" autocomplete="off">
+            </div>
+            
+            <!-- Weiterleitung nach dem Absenden -->
+            <input type="hidden" name="_next" value="https://IHRE_GITHUB_USERNAME.github.io/REPOSITORY_NAME/danke.html">
+            
+            <div class="form-group">
+              <button type="submit" class="submit-button" id="submit-button">Nachricht senden</button>
+              <div id="form-status" class="form-status"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-section">
+      <h2 class="section-title">Häufig gestellte Fragen</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Was soll ich tun, wenn ich eine verletzte Taube finde?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Wenn Ihr eine verletzte Taube findet, solltet Ihr zunächst versuchen diese z.B in einem luftdurchlässigen Karton zu sichern.</p>
+            <p><b>Wichtig: Kein Futter oder Wasser anbieten, Lebensgefahr! Kontaktaufnahme mit uns unter 01525 9823580.</b></p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Wie kann ich die Taubenhilfe Mettmann unterstützen?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Es gibt verschiedene Möglichkeiten, uns zu unterstützen:</p>
+            <ul>
+              <li>Werdet Mitglied in unserem Verein</li>
+              <li>Spendet einmalig oder regelmäßig</li>
+              <li>Helft ehrenamtlich</li>
+            </ul>
+            <p>Sprecht uns gerne an, wir freuen uns über jede Form der Unterstützung!</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Nehmt Ihr auch Tauben zur Pflege auf?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Ja, wir nehmen verletzte und kranke Tauben zur Pflege auf. Allerdings sind unsere Kapazitäten begrenzt, daher bitten wir um vorherige telefonische Absprache. Bei uns werden die Tauben versorgt und aufgepäppelt, bis sie wieder in die Freiheit entlassen werden können. Tauben, die nicht mehr ausgewildert werden können, vermitteln wir in artgerechte Haltung.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <script src="footer-content.js"></script>
+  </footer>
+  <!-- Event Modal (leer, wird von app.js gesteuert) -->
+  <div id="event-modal-overlay" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-close">×</div>
+      <div id="event-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Skripte laden -->
+  <script src="news-data.js"></script>
+  <script src="events-data.js"></script>
+  <script src="contact.js"></script>
+  <script src="bank-copy.js"></script>
+  <script src="form-validation.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

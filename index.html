@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taubenhilfe Mettmann - Willkommen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <script src="header-content.js"></script>
+  </header>
+  
+  <div class="hero-section">
+    <div class="hero-content">
+      <h2>Herzlich Willkommen bei der Taubenhilfe Mettmann</h2>
+      <p>Wir setzen uns für den Schutz und das Wohlergehen von Stadttauben ein.</p>
+      <a href="ueber-uns.html" class="cta-button">Mehr erfahren</a>
+    </div>
+  </div>
+  
+  <main>
+    <section class="intro-section">
+      <h2 class="section-title">Unsere Mission</h2>
+      <p>Die Taubenhilfe Mettmann engagiert sich für tierschutzgerechte Lösungen im Umgang mit Stadttauben. Wir klären auf, setzen uns für ein respektvolles Miteinander ein und helfen verletzten Tauben.</p>
+    </section>
+    
+    <section>
+      <h2 class="section-title">Was wir tun</h2>
+      <div class="highlights">
+        <div class="highlight-card">
+          <div class="card-image" style="background-image: url('images/taubenhilfe.jpg');"></div>
+          <div class="card-content">
+            <h3>Taubenhilfe</h3>
+            <p>Wir versorgen verletzte und kranke Tauben.</p>
+            <a href="#" class="read-more" data-modal="taubenhilfe">Mehr erfahren</a>
+          </div>
+        </div>
+ 
+        <div class="highlight-card">
+          <div class="card-image" style="background-image: url('images/aufklaerung.jpg');"></div>
+          <div class="card-content">
+            <h3>Aufklärung</h3>
+            <p>Wir informieren über das Leben der Stadttauben und räumen mit Vorurteilen auf.</p>
+            <a href="#" class="read-more" data-modal="aufklaerung">Mehr erfahren</a>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="card-image" style="background-image: url('images/mitmachen.jpg');"></div>
+          <div class="card-content">
+            <h3>Mitmachen</h3>
+            <p>Unterstützt unsere Arbeit durch Spenden oder aktive Mithilfe und werdet Teil unseres Teams.</p>
+            <a href="#" class="read-more" data-modal="mitmachen">Mehr erfahren</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="news-preview">
+      <!-- Wird dynamisch gefüllt -->
+    </section>
+  </main>
+  
+  <footer>
+    <script src="footer-content.js"></script>
+  </footer>
+
+  <!-- "Was wir tun" Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-close">×</div>
+      
+      <!-- Taubenhilfe Modal -->
+      <div id="taubenhilfe-modal" class="modal-content">
+        <h2>Taubenhilfe</h2>
+        <div class="modal-body">
+          <p>Wir versorgen verletzte und kranke Tauben und bieten ihnen einen sicheren Ort zur Genesung.</p>
+          
+          <h3>Unsere Hilfsangebote:</h3>
+          <ul>
+            <li>Erste Hilfe für verletzte Tauben</li>
+            <li>Aufzucht verwaister Jungtauben</li>
+            <li>Beratung bei Taubenproblemen</li>
+          </ul>
+          <h3>Tauben, die apathisch und/oder aufgeplustert auf dem Boden sitzen oder äußere Verletzungen haben, brauchen Hilfe:</h3>
+          <ul>
+            <li>Sicherung in einem luftdurchlässigen Karton</li>
+            <li>Kein Futter und Wasser anbieten (Lebensgefahr!)</li>
+            <li>Kontaktaufnahme mit uns</li>
+          </ul>
+          <h3>Schaut hin und nicht weg, wir und vor allem die Tiere danken es euch!</h3>
+        </div>
+      </div>
+      
+      <!-- Aufklärung Modal -->
+      <div id="aufklaerung-modal" class="modal-content">
+        <h2>Aufklärung</h2>
+        <div class="modal-body">
+          <p>Wir informieren über das Leben der Stadttauben und räumen mit Vorurteilen auf.</p>
+          
+          <h3>Mythen und Fakten</h3>
+          <h4>Fakt ist ...</h4>
+          <ul>
+            <li>Tauben sind sehr intelligente und soziale Tiere und haben den Ruf, der sie ereilt, nicht verdient. Kein Lebewesen hat das verdient.</li>
+            <li>Tauben leben in einem großen Sozialverband, sie sind sozusagen "Herdentiere" und befinden sich zudem ihr Leben lang in einer festen Partnerschaft. Wenn der Partner stirbt, ist es meistens so, dass der Verbliebene sich keinen neuen Partner mehr sucht.</li>
+            <li>Tauben können sich Gesichter merken und erkennen Menschen wieder, sie haben einen großartigen Orientierungssinn und sind wahre Flugkünstler, was sie auch sehr gerne präsentieren und ausleben.</li>
+          </ul>
+          <h4>Mythen ...</h4>
+          <ul>
+            <li>Es ist unwahr, dass Tauben Krankheiten (auf den Menschen) übertragen. Ja, Tauben werden aufgrund der Lebensumstände, denen sie ausgeliefert sind (kein artgerechtes Futter und keinen sicheren Rückzugsort) krank und sterben viel zu früh. Die Krankheiten, die sie bekommen können, sind jedoch artenspezifisch, was bedeutet, dass sie sich nur untereinander anstecken können. Eine Krankheit, die auch auf den Menschen übertragbar wäre, sind Giardien (die auch Hunde und Katzen haben können), aber dafür müsste der infizierte Taubenkot in den menschlichen Mund gelangen und jetzt mal ehrlich... Wie sollte das passieren??? :-)</li>
+            <li>Es ist unwahr, dass Taubenkot ätzend ist. Das einzige Problem an dem Taubenkot ist die nicht artgerechte Fütterung. Dadurch entsteht der sogenannte Hungerkot, der flüssig und schmierig ist. Der Kot von gesunden Tauben, die mit Körnern gefüttert werden, ist fest und lässt sich wunderbar beseitigen.</li>
+            <li>Es ist unwahr, dass die Tauben durch Futter mehr brüten. Tauben wurden so gezüchtet, dass sie mehrmals (bis zu 8 Mal) im Jahr brüten. Durch den sogenannten Brutzwang, der erst recht bei Nahrungsknappheit besteht (Artenerhaltung), gibt es nur noch mehr Krankheiten und Leid bei den Tieren. Wir dürfen nicht vergessen: Es ist menschengemacht, daher müssen wir Menschen auch die Verantwortung übernehmen und den Tauben ein artgerechtes Leben bieten!</li>
+            <li>Vorallem ist es unwahr, dass Tauben Tiere sind, vor denen man sich ekeln oder die man vertreiben müsste! Es sind tolle Lebewesen, mit einem Herz und einer Seele, welche sich nur ein zufriedenes Leben wünschen! Schaut mal genauer hin! :-)</li>
+          </ul>
+          <p><b>Stadttauben sind, im Gegensatz zu den Ringeltauben, KEINE Wildtiere! Sie sind Haustiere (Haus-, Zucht- und Brieftauben), die irgendwann aussortiert und so ihrem Schicksal überlassen wurden. So sind die heutigen Schwärme der Stadttauben in unseren Städten entstanden und das ist auch der Grund, warum sie immer in der Nähe des Menschen sind.</b></p>
+          <h3>Möchtet Ihr mehr über Stadttauben erfahren?</h3>
+          <h3>Kontaktiert uns!</h3>
+        </div>
+      </div>
+      
+      <!-- Mitmachen Modal -->
+        <div id="mitmachen-modal" class="modal-content">
+          <h2>Mitmachen</h2>
+          <div class="modal-body">
+            <p>Unterstützt unsere Arbeit durch Spenden oder aktive Mithilfe und werdet Teil unseres Teams.</p>
+            
+            <h3>So könnt Ihr helfen:</h3>
+            <ul>
+              <li>
+                <strong>Mitglied werden</strong> - 
+                <a href="kontakt.html?betreff=Mitgliedschaft" class="modal-link">Jetzt Mitglied werden</a>
+              </li>
+              <li>
+                <strong>Spenden</strong> - 
+                <a href="kontakt.html?betreff=Spende" class="modal-link">Informationen zu Spenden</a> | 
+                <a href="kontakt.html#bankdaten" class="modal-link">Direkt spenden</a>
+              </li>
+              <li>
+                <strong>Ehrenamtlich helfen</strong> - 
+                <a href="kontakt.html?betreff=Ehrenamt" class="modal-link">Als Helfer/in anmelden</a>
+              </li>
+            </ul>
+            
+            <div class="cta-box">
+              <p>Habt Ihr Fragen oder möchtet mehr erfahren?</p>
+              <a href="kontakt.html" class="cta-button">Kontaktiert uns</a>
+            </div>
+            
+            <p>Jede Hilfe zählt! Gemeinsam können wir das Leben der Stadttauben verbessern!</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Event Modal für die Startseite -->
+  <div id="event-modal-overlay" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-close">×</div>
+      <div id="event-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="news-data.js"></script>
+  <script src="events-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

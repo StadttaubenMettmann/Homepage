@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aktuelles - Taubenhilfe Mettmann</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <script src="header-content.js"></script>
+  </header>
+  
+  <div class="page-header">
+    <div class="page-header-content">
+      <h2>Aktuelles</h2>
+      <p>Neuigkeiten und Veranstaltungen der Taubenhilfe Mettmann</p>
+    </div>
+  </div>
+  
+  <main>
+    <!-- Nachrichten-Bereich -->
+    <section class="news-section">
+      <!-- Wird dynamisch gefüllt -->
+    </section>
+    
+    <!-- Veranstaltungen-Bereich -->
+    <section class="events-section">
+      <h2 class="section-title">Kommende Veranstaltungen</h2>
+      <div class="events-grid">
+        <!-- Wird dynamisch gefüllt -->
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <script src="footer-content.js"></script>
+  </footer>
+
+  <!-- Event Modal -->
+  <div id="event-modal-overlay" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-close">×</div>
+      <div id="event-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+    <!-- Skripte laden -->
+  <script src="news-data.js"></script>
+  <script src="events-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
