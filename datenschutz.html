@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutz - Taubenhilfe Mettmann</title>
+  <title>Kontakt - Taubenhilfe Mettmann</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -17,71 +17,190 @@
     <script src="header-content.js"></script>
   </header>
   
-  <div class="page-header simple-header">
+  <div class="page-header">
     <div class="page-header-content">
-      <h2>Datenschutzerklärung</h2>
+      <h2>Kontakt</h2>
+      <p>Nehmt Kontakt mit uns auf</p>
     </div>
   </div>
   
   <main>
-    <section class="legal-section">
-      <div class="legal-content">
-        <h2>1. Datenschutz auf einen Blick</h2>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info-box">
+          <h2 class="section-title">So erreicht Ihr uns</h2>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Adresse</h3>
+              <p>Stadttauben Mettmann e.V.</p>
+              <p>40822 Mettmann</p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Telefon</h3>
+              <p>Mobil: 01525 9823580</p> 
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>E-Mail</h3>
+              <p>stadttauben_mettmann@gmx.de</p>
+            </div>
+          </div>
+          
+          <div class="social-contact">
+            <h3>Folgen Sie uns</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/groups/400468505791432/" target="_blank" rel="noopener noreferrer" aria-label="Besuchen Sie uns auf Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
         
-        <h3>Allgemeine Hinweise</h3>
-        <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+        <!-- Neue Bankdaten-Sektion -->
+        <div class="contact-info-box" id="bankdaten">
+          <h2 class="section-title">Bankverbindung</h2>
+          
+          <div class="bank-info">
+            <div class="bank-details">
+              <p><strong>Kontoinhaber:</strong> <span id="account-holder">Stadttauben Mettmann e.V.</span></p>
+              <p><strong>IBAN:</strong> <span id="iban">DE64 3015 0200 0002 1884 56</span></p>
+              <p><strong>BIC:</strong> <span id="bic">WELADED1KSD</span></p>
+              <p><strong>Bank:</strong> <span id="bank-name">Kreissparkasse Düsseldorf</span></p>
+              <p><strong>Verwendungszweck:</strong> <span id="purpose">Spende Stadttauben Mettmann</span></p>
+            </div>
+            <div class="copy-buttons">
+              <button class="copy-button" data-copy="account-holder">
+                <i class="fas fa-copy"></i> Kontoinhaber kopieren
+              </button>
+              <button class="copy-button" data-copy="iban">
+                <i class="fas fa-copy"></i> IBAN kopieren
+              </button>
+              <button class="copy-button" data-copy="bic">
+                <i class="fas fa-copy"></i> BIC kopieren
+              </button>
+              <button class="copy-button" data-copy="purpose">
+                <i class="fas fa-copy"></i> Verwendungszweck kopieren
+              </button>
+              <button class="copy-button copy-all">
+                <i class="fas fa-copy"></i> Alle Daten kopieren
+              </button>
+            </div>
+            <div class="copy-notification" id="copy-notification">
+              <i class="fas fa-check-circle"></i> In die Zwischenablage kopiert!
+            </div>
+          </div>
+          
+          <div class="donation-info">
+            <h3>Hinweis zur Spendenquittung</h3>
+            <p>Für Spenden bis 300 Euro reicht dem Finanzamt der Kontoauszug als Nachweis. Für höhere Beträge stellen wir gerne eine Spendenquittung aus. Bitte kontaktiert uns dafür unter Angabe eurer vollständigen Adresse.</p>
+          </div>
+        </div>
         
-        <h3>Datenerfassung auf unserer Website</h3>
-        <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
-        <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
-        
-        <p><strong>Wie erfassen wir Ihre Daten?</strong></p>
-        <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
-        <p>Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere Website betreten.</p>
-        
-        <p><strong>Wofür nutzen wir Ihre Daten?</strong></p>
-        <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
-        
-        <p><strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong></p>
-        <p>Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.</p>
-        
-        <h2>2. Allgemeine Hinweise und Pflichtinformationen</h2>
-        
-        <h3>Datenschutz</h3>
-        <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
-        <p>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p>
-        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
-        
-        <h3>Hinweis zur verantwortlichen Stelle</h3>
-        <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-        <p>Stadttauben Mettmann e.V.<br>
-        Schumannstraße 50<br>
-        40822 Mettmann</p>
-        <p>Telefon: 01525 9823580<br>
-        E-Mail: stadttauben_mettmann@gmx.de</p>
-        <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
-        
-        <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
-        <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
-        
-        <!-- Weitere Datenschutzinformationen würden hier folgen -->
-        
-        <h2>3. Datenerfassung auf unserer Website</h2>
-        
-        <h3>Cookies</h3>
-        <p>Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.</p>
-        <p>Die meisten der von uns verwendeten Cookies sind so genannte "Session-Cookies". Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.</p>
-        <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.</p>
-        
-        <h3>Kontaktformular</h3>
-        <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-        <p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.</p>
-        <p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>
-        
-        <h3>Formspree Kontaktformular</h3>
-        <p>Wenn Sie das Kontaktformular auf unserer Website nutzen, werden die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Betreff und Nachricht) an uns übermittelt. Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+        <div class="contact-form-box">
+          <h2 class="section-title">Kontaktformular</h2>
+          
+          <form class="contact-form" action="https://formsubmit.co/stadttauben_mettmann@gmx.de" method="POST" id="contact-form">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Betreff *</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
 
-        <p>Für die Verarbeitung des Kontaktformulars nutzen wir den Dienst Formspree (Formspree, Inc., 55 Prospect St, Brooklyn, NY 11201, USA). Die von Ihnen eingegebenen Daten werden an Server von Formspree in den USA übertragen und dort gespeichert. Formspree hat sich dem EU-US Privacy Shield Framework unterworfen. Weitere Informationen zum Datenschutz bei Formspree finden Sie unter: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://formspree.io/legal/privacy-policy</a>.</p>
+            <div class="form-group">
+              <label for="message">Nachricht *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *</label>
+            </div>
+            
+            <!-- FormSubmit-spezifische Einstellungen -->
+            <input type="hidden" name="_subject" value="Neue Anfrage von der Taubenhilfe-Website">
+            <input type="hidden" name="_next" value="https://stadttaubenmettmann.github.io/Homepage/danke.html">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Honeypot gegen Spam -->
+            <div style="display:none">
+              <input type="text" name="_honey">
+            </div>
+            
+            <div class="form-group">
+              <button type="submit" class="submit-button" id="submit-button">Nachricht senden</button>
+              <div id="form-status" class="form-status"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-section">
+      <h2 class="section-title">Häufig gestellte Fragen</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Was soll ich tun, wenn ich eine verletzte Taube finde?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Wenn Ihr eine verletzte Taube findet, solltet Ihr zunächst versuchen diese z.B in einem luftdurchlässigen Karton zu sichern.</p>
+            <p><b>Wichtig: Kein Futter oder Wasser anbieten, Lebensgefahr! Kontaktaufnahme mit uns unter 01525 9823580.</b></p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Wie kann ich die Taubenhilfe Mettmann unterstützen?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Es gibt verschiedene Möglichkeiten, uns zu unterstützen:</p>
+            <ul>
+              <li>Werdet Mitglied in unserem Verein</li>
+              <li>Spendet einmalig oder regelmäßig</li>
+              <li>Helft ehrenamtlich</li>
+            </ul>
+            <p>Sprecht uns gerne an, wir freuen uns über jede Form der Unterstützung!</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Nehmt Ihr auch Tauben zur Pflege auf?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Ja, wir nehmen verletzte und kranke Tauben zur Pflege auf. Allerdings sind unsere Kapazitäten begrenzt, daher bitten wir um vorherige telefonische Absprache. Bei uns werden die Tauben versorgt und aufgepäppelt, bis sie wieder in die Freiheit entlassen werden können. Tauben, die nicht mehr ausgewildert werden können, vermitteln wir in artgerechte Haltung.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -89,7 +208,6 @@
   <footer>
     <script src="footer-content.js"></script>
   </footer>
-
   <!-- Event Modal (leer, wird von app.js gesteuert) -->
   <div id="event-modal-overlay" class="modal-overlay">
     <div class="modal-container">
@@ -101,6 +219,9 @@
   <!-- Skripte laden -->
   <script src="news-data.js"></script>
   <script src="events-data.js"></script>
+  <script src="contact.js"></script>
+  <script src="bank-copy.js"></script>
+  <script src="form-validation.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
