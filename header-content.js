@@ -7,8 +7,15 @@ const headerContent = `
       <h1 class="site-title">Taubenhilfe Mettmann</h1>
       <p class="tagline">Hilfe und Schutz für Stadttauben</p>
     </div>
+    <button class="mobile-menu-toggle" aria-label="Menü öffnen">
+      <span class="hamburger-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+    </button>
   </div>
-  <nav aria-label="Hauptnavigation">
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <ul>
       <li><a href="index.html" id="nav-home">Startseite</a></li>
       <li><a href="ueber-uns.html" id="nav-about">Über uns</a></li>
