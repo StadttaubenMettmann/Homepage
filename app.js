@@ -251,6 +251,12 @@ function showInfoModal(modalType) {
     activeModal.style.display = 'block';
     overlay.classList.add('modal-show');
     document.body.classList.add('modal-open');
+    
+    // Optimiere Modal für mobile Geräte
+    setTimeout(optimizeModalForMobile, 50);
+    
+    // Anpassen der Modal-Höhe
+    setTimeout(adjustModalHeight, 10);
   } else {
     console.error(`Modal mit ID ${modalType}-modal nicht gefunden`);
   }
@@ -312,6 +318,12 @@ function showEventDetails(eventId) {
   
   overlay.classList.add('modal-show');
   document.body.classList.add('modal-open');
+  
+  // Optimiere Modal für mobile Geräte
+  setTimeout(optimizeModalForMobile, 50);
+  
+  // Anpassen der Modal-Höhe
+  setTimeout(adjustModalHeight, 10);
 }
 
 // SCHLIESST EIN BELIEBIGES MODAL
@@ -369,3 +381,134 @@ function initActiveNav() {
     // Hier wurde Optional Chaining hinzugefügt (Zeile 222)
     navLinks[currentPage]?.classList.add('active');
 }
+
+// Funktion zum Anpassen der Modal-Höhe
+function adjustModalHeight() {
+  const modalContainers = document.querySelectorAll('.modal-container');
+  const windowHeight = window.innerHeight;
+  
+  modalContainers.forEach(container => {
+    // Maximale Höhe auf 90% des Fensters setzen
+    container.style.maxHeight = (windowHeight * 0.9) + 'px';
+    
+    // Überprüfen, ob das Modal größer als der Bildschirm ist
+    if (container.offsetHeight > windowHeight * 0.9) {
+      container.style.height = (windowHeight * 0.9) + 'px';
+    }
+  });
+}
+
+// Funktion zur Erkennung mobiler Geräte
+function isMobileDevice() {
+  return (window.innerWidth <= 768);
+}
+
+// Modal-Inhalte für mobile Geräte optimieren
+function optimizeModalForMobile() {
+  const aufklaerungModal = document.getElementById('aufklaerung-modal');
+  
+  if (aufklaerungModal && isMobileDevice()) {
+    // Lange Listen in Akkordeon-Menüs umwandeln
+    const longLists = aufklaerungModal.querySelectorAll('ul:not(.short-list)');
+    longLists.forEach(list => {
+      if (list.children.length > 4 && !list.classList.contains('processed')) {
+        list.classList.add('processed'); // Markieren, dass diese Liste bereits verarbeitet wurde
+        
+        // Liste kürzen und "Mehr anzeigen"-Button hinzufügen
+        const listItems = Array.from(list.children);
+        const visibleItems = listItems.slice(0, 3);
+        const hiddenItems = listItems.slice(3);
+        
+        // Sichtbare Elemente behalten
+        list.innerHTML = '';
+        visibleItems.forEach(item => list.appendChild(item));
+        
+        // Container für versteckte Elemente
+        const hiddenContainer = document.createElement('div');
+        hiddenContainer.className = 'hidden-content';
+        hiddenContainer.style.display = 'none';
+        
+        const hiddenList = document.createElement('ul');
+        hiddenItems.forEach(item => hiddenList.appendChild(item));
+        hiddenContainer.appendChild(hiddenList);
+        
+        // "Mehr anzeigen"-Button
+        const toggleButton = document.createElement('button');
+        toggleButton.className = 'toggle-content-btn';
+        toggleButton.textContent = 'Mehr anzeigen';
+        toggleButton.onclick = function() {
+          const isHidden = hiddenContainer.style.display === 'none';
+          hiddenContainer.style.display = isHidden ? 'block' : 'none';
+          toggleButton.textContent = isHidden ? 'Weniger anzeigen' : 'Mehr anzeigen';
+        };
+        
+        // Elemente einfügen
+        list.parentNode.insertBefore(hiddenContainer, list.nextSibling);
+        list.parentNode.insertBefore(toggleButton, hiddenContainer);
+      }
+    });
+    
+    // Große Bilder mit Vorschaubildern ersetzen
+    const largeImages = aufklaerungModal.querySelectorAll('img:not(.small-image):not(.processed-image)');
+    largeImages.forEach(img => {
+      img.classList.add('processed-image'); // Markieren, dass dieses Bild bereits verarbeitet wurde
+      
+      const originalSrc = img.src;
+      const originalAlt = img.alt;
+      
+      // Vorschaubild-Container erstellen
+      const previewContainer = document.createElement('div');
+      previewContainer.className = 'image-preview';
+      
+      // Vorschaubild
+      const previewImg = document.createElement('img');
+      previewImg.src = originalSrc;
+      previewImg.alt = originalAlt;
+      previewImg.className = 'preview-image';
+      previewImg.style.maxHeight = '120px';
+      
+      // "Bild vergrößern"-Text
+      const expandText = document.createElement('span');
+      expandText.className = 'expand-image-text';
+      expandText.textContent = 'Tippen zum Vergrößern';
+      
+      // Zum Container hinzufügen
+      previewContainer.appendChild(previewImg);
+      previewContainer.appendChild(expandText);
+      
+      // Click-Event zum Vergrößern
+      previewContainer.onclick = function() {
+        const fullImage = document.createElement('div');
+        fullImage.className = 'fullscreen-image';
+        fullImage.innerHTML = `
+          <div class="fullscreen-image-container">
+            <img src="${originalSrc}" alt="${originalAlt}">
+            <button class="close-fullscreen">×</button>
+          </div>
+        `;
+        document.body.appendChild(fullImage);
+        
+        // Schließen-Button
+        fullImage.querySelector('.close-fullscreen').onclick = function() {
+          document.body.removeChild(fullImage);
+        };
+      };
+      
+      // Originalbild durch Vorschau ersetzen
+      img.parentNode.replaceChild(previewContainer, img);
+    });
+  }
+  
+  // Scrollposition zurücksetzen
+  const modalContents = document.querySelectorAll('.modal-content');
+  modalContents.forEach(content => {
+    if (content.style.display === 'block') {
+      content.scrollTop = 0;
+    }
+  });
+}
+
+// Event-Listener für Fenstergrößenänderungen
+window.addEventListener('resize', function() {
+  adjustModalHeight();
+});
