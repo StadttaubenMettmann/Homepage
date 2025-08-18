@@ -14,9 +14,79 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // --- Aktive Navigation markieren ---
   initActiveNav();
+  
+  // --- Mobiles Menü initialisieren ---
+  initMobileMenu();
 
   setTimeout(handleAnchorNavigation, 500);
 });
+
+// INITIALISIERT MOBILES MENÜ
+function initMobileMenu() {
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const body = document.body;
+  
+  // Erstelle Overlay-Element für den Hintergrund
+  const menuOverlay = document.createElement('div');
+  menuOverlay.className = 'menu-overlay';
+  body.appendChild(menuOverlay);
+  
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function() {
+      // Toggle Menü-Klassen
+      this.classList.toggle('active');
+      mainNav.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      
+      // Verhindere Scrollen des Hintergrunds, wenn Menü geöffnet ist
+      if (mainNav.classList.contains('active')) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = '';
+      }
+    });
+    
+    // Schließe Menü beim Klick auf einen Link
+    const navLinks = mainNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        body.style.overflow = '';
+      });
+    });
+    
+    // Schließe Menü beim Klick auf das Overlay
+    menuOverlay.addEventListener('click', function() {
+      menuToggle.classList.remove('active');
+      mainNav.classList.remove('active');
+      this.classList.remove('active');
+      body.style.overflow = '';
+    });
+    
+    // Schließe Menü bei Escape-Taste
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        body.style.overflow = '';
+      }
+    });
+    
+    // Schließe Menü bei Größenänderung des Fensters (wenn Desktop-Größe erreicht wird)
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        body.style.overflow = '';
+      }
+    });
+  }
+}
 
 // Verarbeitet die Anker-Navigation
 function handleAnchorNavigation() {
