@@ -112,7 +112,7 @@
         <div class="contact-form-box">
           <h2 class="section-title">Kontaktformular</h2>
           
-          <form class="contact-form" action="https://formspree.io/f/mqalogey" method="POST" id="contact-form">
+          <form class="contact-form" action="https://formsubmit.co/stadttauben_mettmann@gmx.de" method="POST" id="contact-form">
             <div class="form-group">
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required>
@@ -143,14 +143,15 @@
               <label for="privacy">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *</label>
             </div>
             
-            <!-- Honeypot-Feld gegen Spam -->
-            <div class="form-group" style="display:none;">
-              <label for="website">Website (Bitte nicht ausfüllen)</label>
-              <input type="text" id="website" name="_gotcha" autocomplete="off">
-            </div>
-            
-            <!-- Weiterleitung nach dem Absenden -->
+            <!-- FormSubmit-spezifische Einstellungen -->
+            <input type="hidden" name="_subject" value="Neue Anfrage von der Taubenhilfe-Website">
             <input type="hidden" name="_next" value="https://stadttaubenmettmann.github.io/Homepage/danke.html">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Honeypot gegen Spam -->
+            <div style="display:none">
+              <input type="text" name="_honey">
+            </div>
             
             <div class="form-group">
               <button type="submit" class="submit-button" id="submit-button">Nachricht senden</button>
@@ -224,4 +225,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
