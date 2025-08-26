@@ -4,7 +4,6 @@ const footerContent =`
     <div class="footer-column contact-info">
       <h3>Kontakt</h3>
       <p><i class="fas fa-envelope"></i> stadttauben_mettmann@gmx.de </p>
-      <p><i class="fas fa-phone"></i> 01525 9823580</p>
       
       <div class="social-links">
         <a href="https://www.facebook.com/groups/400468505791432/" target="_blank" rel="noopener noreferrer" aria-label="Besuchen Sie uns auf Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -35,3 +34,4 @@ document.addEventListener('DOMContentLoaded', function() {
     footerElement.innerHTML = footerContent;
   }
 });
+
