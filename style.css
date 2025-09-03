@@ -1140,11 +1140,14 @@ body.modal-open {
 .event-image { 
   margin: 20px 0; 
   border-radius: 6px; 
-  overflow: visible; 
+  overflow: visible;   
+   max-width: 100%;
+   text-align: center;
 }
 
 .event-image img { 
   width: 100%; 
+   margin: 0 auto;
   height: auto; 
   display: block; 
 }
@@ -1966,4 +1969,5 @@ body.modal-open {
   margin: 15px auto;
   border-radius: 4px;
 }
+
 
