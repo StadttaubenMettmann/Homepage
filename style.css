@@ -1140,7 +1140,7 @@ body.modal-open {
 .event-image { 
   margin: 20px 0; 
   border-radius: 6px; 
-  overflow: hidden; 
+  overflow: visible; 
 }
 
 .event-image img { 
@@ -1966,3 +1966,4 @@ body.modal-open {
   margin: 15px auto;
   border-radius: 4px;
 }
+
