@@ -2,11 +2,12 @@
 const eventItems = [
   {
     id: "event-1",
-    day: "01",
+    day: "05",
     month: "Sep",
     title: "Fütterungsbeginn",
-    time: "13:00 - 14:00 Uhr",
+    time: "12:30 - 14:00 Uhr",
     location: "Wiese am Hammerbach",
     description: "Auftaktveranstaltung um die Umsiedlung der Tauben aus dem Innenstadtbereich zu beginnen.",
   }
 ];
+
