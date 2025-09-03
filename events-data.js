@@ -8,6 +8,8 @@ const eventItems = [
     time: "12:30 - 14:00 Uhr",
     location: "Wiese am Hammerbach",
     description: "Auftaktveranstaltung um die Umsiedlung der Tauben aus dem Innenstadtbereich zu beginnen.",
+    image: 'images/flyer.pdf'
   }
 ];
+
 
