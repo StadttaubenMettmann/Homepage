@@ -1034,7 +1034,9 @@ nav a.active::after {
 
 /* Für Event-Modal */
 #event-modal-content {
-  display: block;
+  display: flex;
+   flex-direction: column;
+   overflow: visible;
 }
 
 /* Verhindern des Scrollens des Hintergrunds */
@@ -1972,6 +1974,7 @@ body.modal-open {
   margin: 15px auto;
   border-radius: 4px;
 }
+
 
 
 
