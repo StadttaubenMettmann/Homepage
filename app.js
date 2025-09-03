@@ -358,6 +358,7 @@ function showEventDetails(eventId) {
     return;
   }
   
+  // GEÄNDERT: Inline-Styles für das Bild hinzugefügt
   modalContent.innerHTML = `
     <div class="event-modal-header">
       <div class="event-modal-date">
@@ -375,7 +376,9 @@ function showEventDetails(eventId) {
       <div class="event-description">
         <p>${event.description}</p>
       </div>
-      ${event.image ? `<div class="event-image"><img src="${event.image}" alt="${event.title}"></div>` : ''}
+      ${event.image ? `<div class="event-image" style="margin: 20px 0; overflow: visible !important; max-width: 100%; text-align: center;">
+        <img src="${event.image}" alt="${event.title}" style="width: auto; max-width: 100%; height: auto; max-height: 60vh; object-fit: contain; margin: 0 auto; display: block;">
+      </div>` : ''}
     </div>
   `;
   
@@ -452,18 +455,38 @@ function initActiveNav() {
     navLinks[currentPage]?.classList.add('active');
 }
 
-// Funktion zum Anpassen der Modal-Höhe
+// GEÄNDERT: Verbesserte Funktion zum Anpassen der Modal-Höhe
 function adjustModalHeight() {
   const modalContainers = document.querySelectorAll('.modal-container');
   const windowHeight = window.innerHeight;
   
   modalContainers.forEach(container => {
-    // Maximale Höhe auf 90% des Fensters setzen
+    // Maximale Höhe auf 90% des Fensters setzen, aber mit overflow: visible
     container.style.maxHeight = (windowHeight * 0.9) + 'px';
+    container.style.overflow = 'visible'; // Wichtig: Erlaubt Inhalten, über den Container hinauszuragen
     
-    // Überprüfen, ob das Modal größer als der Bildschirm ist
-    if (container.offsetHeight > windowHeight * 0.9) {
-      container.style.height = (windowHeight * 0.9) + 'px';
+    // Spezielle Behandlung für Event-Bilder
+    const eventImage = container.querySelector('.event-image');
+    if (eventImage) {
+      eventImage.style.overflow = 'visible';
+      
+      const img = eventImage.querySelector('img');
+      if (img) {
+        img.style.maxHeight = '60vh';
+        img.style.width = 'auto';
+        img.style.objectFit = 'contain';
+      }
+    }
+    
+    // Für mobile Geräte: Scrolling im Modal-Body statt im Container
+    if (isMobileDevice()) {
+      container.style.overflow = 'auto';
+      
+      const modalBody = container.querySelector('.event-modal-body');
+      if (modalBody) {
+        modalBody.style.maxHeight = (windowHeight * 0.6) + 'px';
+        modalBody.style.overflow = 'auto';
+      }
     }
   });
 }
