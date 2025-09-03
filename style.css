@@ -1146,7 +1146,10 @@ body.modal-open {
 }
 
 .event-image img { 
-  width: 100%; 
+  width: 100%;
+   max-width: 100%;
+   object-fit: contain;
+   border-radius: 6px;
    margin: 0 auto;
   height: auto; 
   display: block; 
@@ -1969,5 +1972,6 @@ body.modal-open {
   margin: 15px auto;
   border-radius: 4px;
 }
+
 
 
